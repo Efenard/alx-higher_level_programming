@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
 This module creates a student class
-with public attributes and replaces
-attributes of student instances using
-Json
+with public attributes and retrives
+json dictionary rep
 """
 
 
@@ -28,10 +27,3 @@ class Student:
             return (self.__dict__)
         return ({key: value for key, value in self.__dict__.items()
                  if key in attrs})
-
-    def reload_from_json(self, json):
-        """
-        function that replaces all attrb of the
-        student instance
-        """
-        self.__dict__.update(json)
